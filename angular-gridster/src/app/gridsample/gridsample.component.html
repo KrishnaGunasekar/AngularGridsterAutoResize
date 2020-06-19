@@ -1,0 +1,17 @@
+Gridster Height : <input type="text" [(ngModel)]="gridsterHeight"> <button (click)="addItem()">Add Item</button>
+
+<button (click)="getHW()">Get Height & Width</button>
+
+
+<br />
+<br />
+
+
+
+
+<div [ngStyle]="{'height':this.getGridsterHeight()}">
+  <gridster #gridsterComponent id="gridsterComponent" [options]="options">
+    <gridster-item [item]="item" *ngFor="let item of dashboard">
+    </gridster-item>
+  </gridster>
+</div>
